@@ -1,5 +1,5 @@
 provider "aws" {
-  region = ap-southeast-2
+  region = "ap-southeast-2"
   # access_key = "AKIAWYIYEHRNL3KVS6NL"  # Your AWS Access Key
   # secret_key = "Ztwtqp0xis9CE4UcPvM3r7WIwuSLet/25upCYfVN"  # Your AWS Secret Key
 }
