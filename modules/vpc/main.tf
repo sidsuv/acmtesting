@@ -1,24 +1,24 @@
-provider "aws" {
-  region = var.region
-  # access_key = "AKIAWYIYEHRNL3KVS6NL"  # Your AWS Access Key
-  # secret_key = "Ztwtqp0xis9CE4UcPvM3r7WIwuSLet/25upCYfVN"  # Your AWS Secret Key
-}
-terraform {
-  backend "remote" {
-    organization = "sidterraorg"
+# provider "aws" {
+#   region = var.region
+#   # access_key = "AKIAWYIYEHRNL3KVS6NL"  # Your AWS Access Key
+#   # secret_key = "Ztwtqp0xis9CE4UcPvM3r7WIwuSLet/25upCYfVN"  # Your AWS Secret Key
+# }
+# terraform {
+#   backend "remote" {
+#     organization = "sidterraorg"
 
-    workspaces {
-      name = "acmtesting"
-    }
-  }
+#     workspaces {
+#       name = "acmtesting"
+#     }
+#   }
 
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
+#   required_providers {
+#     aws = {
+#       source  = "hashicorp/aws"
+#       version = "~> 5.0"
+#     }
+#   }
+# }
 
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
