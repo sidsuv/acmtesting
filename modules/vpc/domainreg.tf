@@ -10,7 +10,7 @@ resource "aws_route53domains_domain" "domain1" {
     state = "NSW"
     country_code = "AU"
     zip_code = "2155"
-    phone_number = "61407289352"
+    phone_number = "+061407289352"
     email = "sudhir@sumotech.com.au"
   }
   registrant_contact {
@@ -23,7 +23,7 @@ resource "aws_route53domains_domain" "domain1" {
     state = "NSW"
     country_code = "AU"
     zip_code = "2155"
-    phone_number = "61407289352"
+    phone_number = "+061407289352"
     email = "sudhir@sumotech.com.au"
   }
   tech_contact {
@@ -36,7 +36,7 @@ resource "aws_route53domains_domain" "domain1" {
     state = "NSW"
     country_code = "AU"
     zip_code = "2155"
-    phone_number = "61407289352"
+    phone_number = "+061407289352"
     email = "sudhir@sumotech.com.au"
   }
 
