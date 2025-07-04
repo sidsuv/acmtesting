@@ -48,11 +48,11 @@ resource "aws_route53domains_domain" "domain1" {
 
 # ✅ Create a public hosted zone for the domain
 resource "aws_route53_zone" "zone1" {
-  name = aws_route53domains_registered_domain.domain1.domain_name
+  name = aws_route53domains_domain.domain1.domain_name
 }
 
 output "domain_name" {
-  value = aws_route53domains_registered_domain.domain1.domain_name
+  value = aws_route53domains_domain.domain1.domain_name
 }
 
 output "hosted_zone_id" {
