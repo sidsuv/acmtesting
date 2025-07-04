@@ -1,5 +1,5 @@
 resource "aws_route53domains_registered_domain" "domain1" {
-  domain_name = [sidpickleball.com.au]
+  domain_name = "sidpickleball.com.au"
   admin_contact {
     first_name   = "Sudhir"
     last_name    = "Suvarna"
