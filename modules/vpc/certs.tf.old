@@ -36,7 +36,7 @@ resource "aws_route53_record" "cert_validation" {
       type   = dvo.resource_record_type
     }
   }
-
+  depends_on = [aws_acm_certificate.cert]
   zone_id = "Z03054613MGI9EV9H1546"
   name    = each.value.name
   type    = each.value.type
