@@ -37,14 +37,16 @@ resource "aws_route53_record" "cert_validation" {
     }
   }
   depends_on = [aws_acm_certificate.cert]
-  zone_id = "Z04272903603WTLN3VHJV"
+  zone_id = "Z04325783MAMHUZLGPU63"
   name    = each.value.name
   type    = each.value.type
   ttl     = 60
   records = [each.value.record]
 }
 
+  
 resource "aws_acm_certificate_validation" "cert_validation_complete" {
+  depends_on = [aws_acm_certificate.cert]
   certificate_arn         = aws_acm_certificate.cert.arn
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
 }
