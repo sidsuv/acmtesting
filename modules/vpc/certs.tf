@@ -37,7 +37,7 @@ resource "aws_route53_record" "cert_validation" {
     }
   }
   depends_on = [aws_acm_certificate.cert]
-  zone_id = "Z03054613MGI9EV9H1546"
+  zone_id = "Z04272903603WTLN3VHJV"
   name    = each.value.name
   type    = each.value.type
   ttl     = 60
